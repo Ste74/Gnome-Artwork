@@ -4,7 +4,7 @@
 
 DE=gnome
 DIRECTORY=/home/$USER/Github/Gnome-Artwork/
-ABSPATH=/usr/share/backgrounds/
+ABSPATH=/usr/share/backgrounds/manjaro-$DE/
 
 clear
 echo "#################################"
@@ -65,7 +65,7 @@ echo "</wallpapers>" >> manjaro-$DE.xml
 sed "s|${DIRECTORY}|${ABSPATH}|g" manjaro-$DE.xml > ~/.local/share/gnome-background-properties/manjaro-$DE.xml
 
 #Move again in Original path and clean all
-mv ~/.local/share/gnome-background-properties/manjaro-$DE.xml ~/Github/Gnome-Artwork/manjaro-$DE.xml
+mv ~/.local/share/gnome-background-properties/manjaro-$DE.xml ${DIRECTORY}manjaro-$DE.xml
 rm lspictures.txt
 echo
 echo "#################################"

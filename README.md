@@ -1,2 +1,4 @@
 # Gnome-Artwork
-Artworks repository for Gnome Desktop
+
+A collection of wallpapers made by our community
+https://forum.manjaro.org/
