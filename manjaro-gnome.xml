@@ -58,6 +58,30 @@
     <shade_type>solid</shade_type>
   </wallpaper>
 <wallpaper>
+<name>/usr/share/backgrounds/manjaro-gnome/manjaro-adapta.jpg</name>
+<filename>/usr/share/backgrounds/manjaro-gnome/manjaro-adapta.jpg</filename>
+  <options>stretched</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+    <shade_type>solid</shade_type>
+  </wallpaper>
+<wallpaper>
+<name>/usr/share/backgrounds/manjaro-gnome/manjaro-gnome-adapta.jpg</name>
+<filename>/usr/share/backgrounds/manjaro-gnome/manjaro-gnome-adapta.jpg</filename>
+  <options>stretched</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+    <shade_type>solid</shade_type>
+  </wallpaper>
+<wallpaper>
+<name>/usr/share/backgrounds/manjaro-gnome/manjaro-gnome-adapta-lockscreen.jpg</name>
+<filename>/usr/share/backgrounds/manjaro-gnome/manjaro-gnome-adapta-lockscreen.jpg</filename>
+  <options>stretched</options>
+    <pcolor>#ffffff</pcolor>
+    <scolor>#000000</scolor>
+    <shade_type>solid</shade_type>
+  </wallpaper>
+<wallpaper>
 <name>/usr/share/backgrounds/manjaro-gnome/manjaro-gnome.jpg</name>
 <filename>/usr/share/backgrounds/manjaro-gnome/manjaro-gnome.jpg</filename>
   <options>stretched</options>

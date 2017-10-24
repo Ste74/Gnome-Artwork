@@ -3,19 +3,19 @@
 #set variable
 
 DE=gnome
-DIRECTORY=/$srcdir/$_repo-$_snapshot/
+DIRECTORY=/home/$USER/Github/Gnome-Artwork/
 ABSPATH=/usr/share/backgrounds/manjaro-$DE/
 
 clear
 echo "#################################"
 echo "This script makes all pictures in selected custom directory"
 echo "available as your system-wide $DE wallpapers." 
-echo "It reads/lists all pictures in selected directory and creates manjaro-$DE.xml file in $srcdir/share/gnome-background-properties/."
+echo "It reads/lists all pictures in selected directory and creates manjaro-$DE.xml file in ~/.local/share/gnome-background-properties/."
 echo "USAGE: Make this script executable (chmod +x backgrounds.sh) and execute it (./backgrounds.sh or ./backgrounds.sh )." 
 echo "#################################"
 echo
 # if doesn't exists creating directory ~/.local/share/gnome-background-properties
-mkdir -p $srcdir/share/gnome-background-properties
+mkdir -p ~/.local/share/gnome-background-properties
 
 echo
 if [ ! -d $DIRECTORY ]
@@ -60,12 +60,12 @@ done
 # creating the bottom of mybackgrounds.xml
 echo "</wallpapers>" >> manjaro-$DE.xml
 
-# Change <name>/path_to/picture</name> to <name>picture</name> and move mybackgrounds.xml  to $srcdir/share/gnome-background-properties/.
-# if you like to copy mybackgrounds.xml to $srcdir/mybackgrounds.xml as well
-sed "s|${DIRECTORY}|${ABSPATH}|g" manjaro-$DE.xml > $srcdir/share/gnome-background-properties/manjaro-$DE.xml
+# Change <name>/path_to/picture</name> to <name>picture</name> and move mybackgrounds.xml  to ~/.local/share/gnome-background-properties/.
+# if you like to copy mybackgrounds.xml to ~/.local/mybackgrounds.xml as well
+sed "s|${DIRECTORY}|${ABSPATH}|g" manjaro-$DE.xml > ~/.local/share/gnome-background-properties/manjaro-$DE.xml
 
 #Move again in Original path and clean all
-mv $srcdir/share/gnome-background-properties/manjaro-$DE.xml ${DIRECTORY}manjaro-$DE.xml
+mv ~/.local/share/gnome-background-properties/manjaro-$DE.xml ${DIRECTORY}manjaro-$DE.xml
 rm lspictures.txt
 echo
 echo "#################################"
