@@ -3,7 +3,7 @@
 #set variable
 
 DE=gnome
-DIRECTORY=/Gnome-Artwork/
+DIRECTORY=/src/Gnome-Artwork/
 ABSPATH=/usr/share/backgrounds/manjaro-$DE/
 
 clear
