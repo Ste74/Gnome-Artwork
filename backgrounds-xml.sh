@@ -3,7 +3,7 @@
 #set variable
 set -x
 DE=gnome
-DIRECTORY=/$srcdir/$_repo-$_snapshot/
+DIRECTORY=/$srcdir/Gnome-Artwork/
 ABSPATH=/usr/share/backgrounds/manjaro-$DE/
 
 clear
@@ -62,10 +62,9 @@ echo "</wallpapers>" >> manjaro-$DE.xml
 
 # Change <name>/path_to/picture</name> to <name>picture</name> and move mybackgrounds.xml  to $srcdir/share/gnome-background-properties/.
 # if you like to copy mybackgrounds.xml to $srcdir/mybackgrounds.xml as well
-sed "s|${DIRECTORY}|${ABSPATH}|g" manjaro-$DE.xml > $srcdir/share/gnome-background-properties/manjaro-$DE.xml
+sed "s|${DIRECTORY}|${ABSPATH}|g" manjaro-$DE.xml > ${DIRECTORY}manjaro-$DE.xml
 
-#Move again in Original path and clean all
-mv $srcdir/share/gnome-background-properties/manjaro-$DE.xml ${DIRECTORY}manjaro-$DE.xml
+#clean all
 rm lspictures.txt
 echo
 echo "#################################"
