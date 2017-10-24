@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #set variable
-set -x
+
 DE=gnome
 DIRECTORY=/$srcdir/Gnome-Artwork/
 ABSPATH=/usr/share/backgrounds/manjaro-$DE/
@@ -10,13 +10,8 @@ clear
 echo "#################################"
 echo "This script makes all pictures in selected custom directory"
 echo "available as your system-wide $DE wallpapers." 
-echo "It reads/lists all pictures in selected directory and creates manjaro-$DE.xml file in $srcdir/share/gnome-background-properties/."
-echo "USAGE: Make this script executable (chmod +x backgrounds.sh) and execute it (./backgrounds.sh or ./backgrounds.sh )." 
+echo "It reads/lists all pictures in selected directory and creates manjaro-$DE.xml file in /usr/share/gnome-background-properties/."
 echo "#################################"
-echo
-# if doesn't exists creating directory ~/.local/share/gnome-background-properties
-#mkdir -p {$DIRECTORY}share/gnome-background-properties
-
 echo
 if [ ! -d $DIRECTORY ]
 then
@@ -32,8 +27,7 @@ echo
 
 #check if mybackground.xml already exist
 
-if [ -e manjaro-$DE.xml ]
-then
+if [ -e manjaro-$DE.xml ]; then
     rm manjaro-$DE.xml
 fi
 
@@ -54,7 +48,7 @@ echo "<wallpaper>
     <pcolor>#ffffff</pcolor>
     <scolor>#000000</scolor>
     <shade_type>solid</shade_type>
-  </wallpaper>" >> manjaro-$DE.xml
+</wallpaper>" >> manjaro-$DE.xml
 done
 
 # creating the bottom of mybackgrounds.xml
