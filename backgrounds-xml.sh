@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #set variable
-
+set -x
 DE=gnome
 DIRECTORY=/$srcdir/$_repo-$_snapshot/
 ABSPATH=/usr/share/backgrounds/manjaro-$DE/
@@ -15,7 +15,7 @@ echo "USAGE: Make this script executable (chmod +x backgrounds.sh) and execute i
 echo "#################################"
 echo
 # if doesn't exists creating directory ~/.local/share/gnome-background-properties
-mkdir -p $srcdir/share/gnome-background-properties
+#mkdir -p {$DIRECTORY}share/gnome-background-properties
 
 echo
 if [ ! -d $DIRECTORY ]
