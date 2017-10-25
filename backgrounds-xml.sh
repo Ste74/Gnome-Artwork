@@ -2,9 +2,11 @@
 
 #set variable
 
+set -x
+
 DE=gnome
-DIRECTORY=${pwd}/
-ABSPATH=/usr/share/backgrounds/manjaro-$DE/
+DIRECTORY=$(pwd)
+ABSPATH=/usr/share/backgrounds/manjaro-$DE
 
 clear
 echo "#################################"
@@ -40,7 +42,7 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 echo "OK. Now we are creating manjaro-$DE.xml"
 
 # This script is looking for .png and .jpg files only, but you can add here another file types. The "<options>stretched</options>" should work best for unknow sized files.
-for i in $DIRECTORY*.jpg $DIRECTORY*.png; do
+for i in $DIRECTORY/*.jpg $DIRECTORY/*.png; do
 echo "<wallpaper>
 <name>$i</name>
 <filename>$i</filename>
@@ -56,7 +58,7 @@ echo "</wallpapers>" >> manjaro-$DE.xml
 
 # Change <name>/path_to/picture</name> to <name>picture</name> and move mybackgrounds.xml  to $srcdir/share/gnome-background-properties/.
 # if you like to copy mybackgrounds.xml to $srcdir/mybackgrounds.xml as well
-sed "s|${DIRECTORY}|${ABSPATH}|g" manjaro-$DE.xml > ${DIRECTORY}manjaro-$DE.xml
+sed "s|${DIRECTORY}/|${ABSPATH}/|g" manjaro-$DE.xml > ${DIRECTORY}/manjaro-$DE.xml
 
 #clean all
 rm lspictures.txt
