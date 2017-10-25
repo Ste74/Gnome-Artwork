@@ -21,7 +21,7 @@ echo "OK. Now we are creating manjaro-$DE.xml"
 for i in $(ls *.png) $(ls *jpg); do
 echo "<wallpaper>
 <name>${ABSPATH}$i</name>
-<filename>$i</filename>
+<filename>${ABSPATH}$i</filename>
   <options>stretched</options>
     <pcolor>#ffffff</pcolor>
     <scolor>#000000</scolor>
